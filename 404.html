@@ -2,17 +2,96 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CIERA has moved to ciera.co.za</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#FAFAFC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0D0D0C" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://ciera.co.za/">
+<title>CIERA</title>
 <script>
   // app.leke.co.za was CIERA's temporary address. The app lives at
-  // https://ciera.co.za now. Carry the path, query (invite links) and hash.
-  location.replace('https://ciera.co.za' + location.pathname + location.search + location.hash);
+  // https://ciera.co.za now. This page is CIERA's launch screen: the mark
+  // shows while the browser carries you across, path, query (invite links)
+  // and hash intact.
+  (function () {
+    var target = 'https://ciera.co.za' + location.pathname + location.search + location.hash;
+    window.cieraTarget = target;
+    location.replace(target);
+  })();
 </script>
 <meta http-equiv="refresh" content="0; url=https://ciera.co.za/">
-<style>body{font-family:-apple-system,system-ui,sans-serif;margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#f2f2f7;color:#1c1c1e;text-align:center;padding:24px}a{color:#0a84ff}</style>
+<style>
+  /* The same boot mark the app itself launches with (web/index.html in
+     ciera-solo). All motion happens INSIDE the wordmark: the mark sits dim
+     and a charge of brand blue sweeps through the letterforms, a white
+     gleam riding just ahead of it, while the mark breathes. The SVG is the
+     mask for every layer. */
+  :root{color-scheme:light dark;}
+  html{background:#FAFAFC;}
+  body{background:#FAFAFC;margin:0;min-height:100vh;min-height:100dvh;
+    font-family:-apple-system,system-ui,"Helvetica Neue",Arial,sans-serif;
+    color:#1c1c1e;display:flex;flex-direction:column;align-items:center;
+    justify-content:center;padding:24px;box-sizing:border-box;text-align:center;}
+  @media (prefers-color-scheme:dark){
+    html{background:#0D0D0C;} body{background:#0D0D0C;color:#f2f2f7;}}
+
+  .mark{position:relative;width:150px;height:73px;
+    animation:ciera-breathe 2.2s ease-in-out infinite;}
+  .mark span{position:absolute;inset:0;
+    -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 835 406' width='835' height='406'%3E %3Cpath d='M 771 135 L 771 156 L 775 156 L 775 142 L 781 156 L 784 156 L 789 143 L 790 156 L 794 155 L 794 135 L 788 136 L 782 150 L 777 136 Z M 751 135 L 751 138 L 757 139 L 757 155 L 761 156 L 761 139 L 767 138 L 767 135 Z M 595 144 L 583 157 L 570 179 L 565 194 L 562 219 L 564 244 L 569 261 L 579 280 L 598 301 L 612 311 L 637 321 L 654 324 L 670 324 L 679 321 L 687 314 L 692 303 L 692 290 L 686 278 L 676 271 L 651 268 L 637 261 L 625 249 L 617 228 L 617 213 L 619 205 L 627 191 L 639 180 L 654 174 L 675 174 L 690 180 L 700 188 L 708 199 L 712 210 L 713 303 L 715 309 L 724 319 L 733 323 L 746 323 L 758 318 L 764 311 L 767 303 L 767 207 L 764 191 L 758 175 L 744 154 L 732 142 L 718 132 L 694 122 L 677 119 L 653 119 L 635 122 L 615 130 Z M 322 127 L 307 135 L 286 154 L 277 166 L 270 180 L 263 209 L 263 233 L 267 254 L 274 271 L 283 285 L 301 303 L 316 313 L 333 320 L 355 324 L 406 324 L 413 322 L 422 315 L 427 306 L 428 293 L 424 281 L 417 274 L 408 270 L 365 270 L 351 268 L 342 264 L 328 252 L 321 241 L 317 222 L 318 212 L 326 194 L 341 180 L 356 174 L 372 174 L 373 176 L 343 205 L 338 215 L 338 228 L 345 241 L 354 248 L 362 250 L 373 249 L 382 244 L 443 184 L 447 175 L 447 162 L 445 157 L 436 146 L 416 131 L 390 121 L 377 119 L 352 119 Z M 133 118 L 114 121 L 91 130 L 70 146 L 58 160 L 51 171 L 43 192 L 40 209 L 40 231 L 43 249 L 51 270 L 70 295 L 91 311 L 107 318 L 130 323 L 148 323 L 160 318 L 168 308 L 170 293 L 165 279 L 153 270 L 131 268 L 114 260 L 100 244 L 95 230 L 96 207 L 100 197 L 106 189 L 116 180 L 125 175 L 156 170 L 163 165 L 168 157 L 170 141 L 164 127 L 152 119 Z M 190 53 L 184 66 L 184 82 L 189 92 L 187 115 L 192 133 L 190 141 L 190 301 L 194 312 L 201 319 L 211 323 L 230 321 L 239 314 L 245 302 L 267 328 L 288 344 L 307 354 L 341 364 L 383 365 L 407 360 L 430 351 L 451 338 L 470 321 L 477 323 L 490 323 L 500 319 L 507 312 L 511 302 L 512 195 L 515 189 L 527 178 L 556 170 L 566 162 L 570 153 L 570 139 L 563 126 L 550 119 L 525 120 L 506 126 L 485 140 L 473 125 L 448 103 L 423 89 L 407 83 L 383 78 L 360 77 L 335 80 L 314 86 L 306 70 L 295 58 L 279 48 L 262 43 L 243 43 L 235 45 L 227 41 L 212 40 L 200 44 Z M 261 49 L 281 56 L 298 70 L 303 77 L 310 94 L 341 85 L 360 83 L 383 84 L 417 93 L 428 98 L 452 114 L 478 141 L 480 145 L 467 161 L 457 191 L 457 304 L 459 310 L 465 317 L 440 338 L 412 352 L 394 357 L 369 360 L 341 358 L 309 348 L 289 337 L 276 327 L 252 301 L 244 287 L 244 137 L 240 129 L 234 123 L 224 119 L 207 120 L 197 127 L 193 114 L 193 103 L 195 100 L 209 107 L 225 107 L 235 103 L 244 95 L 250 84 L 251 71 L 248 59 L 242 51 Z' fill='%235090CD' fill-rule='evenodd'/%3E %3C/svg%3E") center/contain no-repeat;
+    mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 835 406' width='835' height='406'%3E %3Cpath d='M 771 135 L 771 156 L 775 156 L 775 142 L 781 156 L 784 156 L 789 143 L 790 156 L 794 155 L 794 135 L 788 136 L 782 150 L 777 136 Z M 751 135 L 751 138 L 757 139 L 757 155 L 761 156 L 761 139 L 767 138 L 767 135 Z M 595 144 L 583 157 L 570 179 L 565 194 L 562 219 L 564 244 L 569 261 L 579 280 L 598 301 L 612 311 L 637 321 L 654 324 L 670 324 L 679 321 L 687 314 L 692 303 L 692 290 L 686 278 L 676 271 L 651 268 L 637 261 L 625 249 L 617 228 L 617 213 L 619 205 L 627 191 L 639 180 L 654 174 L 675 174 L 690 180 L 700 188 L 708 199 L 712 210 L 713 303 L 715 309 L 724 319 L 733 323 L 746 323 L 758 318 L 764 311 L 767 303 L 767 207 L 764 191 L 758 175 L 744 154 L 732 142 L 718 132 L 694 122 L 677 119 L 653 119 L 635 122 L 615 130 Z M 322 127 L 307 135 L 286 154 L 277 166 L 270 180 L 263 209 L 263 233 L 267 254 L 274 271 L 283 285 L 301 303 L 316 313 L 333 320 L 355 324 L 406 324 L 413 322 L 422 315 L 427 306 L 428 293 L 424 281 L 417 274 L 408 270 L 365 270 L 351 268 L 342 264 L 328 252 L 321 241 L 317 222 L 318 212 L 326 194 L 341 180 L 356 174 L 372 174 L 373 176 L 343 205 L 338 215 L 338 228 L 345 241 L 354 248 L 362 250 L 373 249 L 382 244 L 443 184 L 447 175 L 447 162 L 445 157 L 436 146 L 416 131 L 390 121 L 377 119 L 352 119 Z M 133 118 L 114 121 L 91 130 L 70 146 L 58 160 L 51 171 L 43 192 L 40 209 L 40 231 L 43 249 L 51 270 L 70 295 L 91 311 L 107 318 L 130 323 L 148 323 L 160 318 L 168 308 L 170 293 L 165 279 L 153 270 L 131 268 L 114 260 L 100 244 L 95 230 L 96 207 L 100 197 L 106 189 L 116 180 L 125 175 L 156 170 L 163 165 L 168 157 L 170 141 L 164 127 L 152 119 Z M 190 53 L 184 66 L 184 82 L 189 92 L 187 115 L 192 133 L 190 141 L 190 301 L 194 312 L 201 319 L 211 323 L 230 321 L 239 314 L 245 302 L 267 328 L 288 344 L 307 354 L 341 364 L 383 365 L 407 360 L 430 351 L 451 338 L 470 321 L 477 323 L 490 323 L 500 319 L 507 312 L 511 302 L 512 195 L 515 189 L 527 178 L 556 170 L 566 162 L 570 153 L 570 139 L 563 126 L 550 119 L 525 120 L 506 126 L 485 140 L 473 125 L 448 103 L 423 89 L 407 83 L 383 78 L 360 77 L 335 80 L 314 86 L 306 70 L 295 58 L 279 48 L 262 43 L 243 43 L 235 45 L 227 41 L 212 40 L 200 44 Z M 261 49 L 281 56 L 298 70 L 303 77 L 310 94 L 341 85 L 360 83 L 383 84 L 417 93 L 428 98 L 452 114 L 478 141 L 480 145 L 467 161 L 457 191 L 457 304 L 459 310 L 465 317 L 440 338 L 412 352 L 394 357 L 369 360 L 341 358 L 309 348 L 289 337 L 276 327 L 252 301 L 244 287 L 244 137 L 240 129 L 234 123 L 224 119 L 207 120 L 197 127 L 193 114 L 193 103 L 195 100 L 209 107 L 225 107 L 235 103 L 244 95 L 250 84 L 251 71 L 248 59 L 242 51 Z' fill='%235090CD' fill-rule='evenodd'/%3E %3C/svg%3E") center/contain no-repeat;}
+  .base{background:rgba(80,144,205,.46)}
+  .charge,.gleam{overflow:hidden}
+  .charge::before,.gleam::before{
+    content:'';position:absolute;top:0;bottom:0;left:0;width:78%;
+    animation:ciera-sweep 2.2s cubic-bezier(.45,.05,.4,.95) infinite alternate;}
+  .charge::before{background:linear-gradient(90deg,
+    rgba(80,144,205,0), #5090CD 32%, #5090CD 68%, rgba(80,144,205,0));}
+  .gleam::before{width:30%;animation-delay:.08s;
+    background:linear-gradient(90deg, transparent, rgba(255,255,255,.95) 50%, transparent);}
+  @media (prefers-color-scheme:dark){
+    .base{background:rgba(111,170,224,.42)}
+    .charge::before{background:linear-gradient(90deg,
+      rgba(111,170,224,0), #6FAAE0 32%, #6FAAE0 68%, rgba(111,170,224,0));}
+    .gleam::before{background:linear-gradient(90deg,
+      transparent, rgba(205,230,255,.95) 50%, transparent);}}
+  @keyframes ciera-sweep{0%{transform:translateX(-72%)}100%{transform:translateX(112%)}}
+  @keyframes ciera-breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}
+  @media (prefers-reduced-motion:reduce){
+    .mark{animation:none}
+    .charge::before,.gleam::before{animation:none}
+    .charge{background:#5090CD}
+    .charge::before,.gleam{display:none}}
+
+  /* Only if the browser did not carry you across (a home-screen install
+     made from the old address, a blocked redirect). Appears after a beat,
+     never on the way through. */
+  #stay{margin-top:40px;font-size:15px;line-height:1.45;opacity:0;
+    transition:opacity .4s ease;max-width:22rem;}
+  #stay.on{opacity:1}
+  #stay a{color:#5090CD;text-decoration:none;font-weight:600;}
+  @media (prefers-color-scheme:dark){#stay a{color:#6FAAE0}}
+  #stay p{margin:0 0 10px}
+  #stay .re{font-size:13px;opacity:.7}
+</style>
 </head>
 <body>
-<p>CIERA now lives at <a href="https://ciera.co.za/">ciera.co.za</a>. Taking you there.</p>
+  <div class="mark" aria-label="CIERA" role="img">
+    <span class="base"></span><span class="charge"></span><span class="gleam"></span>
+  </div>
+  <div id="stay" aria-live="polite">
+    <p><a id="open" href="https://ciera.co.za/">Open CIERA</a></p>
+    <p class="re" id="re" hidden>CIERA now lives at ciera.co.za. Add it to your home screen again from there.</p>
+  </div>
+  <script>
+    (function () {
+      var open = document.getElementById('open');
+      if (window.cieraTarget) open.href = window.cieraTarget;
+      var standalone = (window.matchMedia && matchMedia('(display-mode: standalone)').matches) ||
+        navigator.standalone === true;
+      if (standalone) document.getElementById('re').hidden = false;
+      setTimeout(function () { document.getElementById('stay').className = 'on'; }, 1800);
+    })();
+  </script>
 </body>
 </html>
